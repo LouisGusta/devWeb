@@ -1,4 +1,4 @@
-package pacotao;
+package pacoteBase;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -33,10 +33,10 @@ public class servlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       Funcionario func1 = new Funcionario(Float.parseFloat(request.getParameter("INPsalarioBruto")), Integer.parseInt(request.getParameter("SLTturnoTrabalho")), request.getParameter("RDfuncionario"));
+       Funcionario func1 = new Funcionario(Float.parseFloat(request.getParameter("INPsalarioBruto")), Integer.parseInt(request.getParameter("SLTturnoTrabalho")), request.getParameter("radioFuncionario"));
       request.setAttribute("funcionario", func1);
        try (PrintWriter out = response.getWriter()) {
-            response.sendRedirect("newjsp.jsp?salarioBruto="+func1.getSalarioBruto()+"&imposto="+func1.calculoImposto()+"&salarioLiquido="+func1.calculoSalarioLiquido());//.forward(request, response);
+            response.sendRedirect("pageFirst.jsp?salarioBruto="+func1.getSalarioBruto()+"&imposto="+func1.calculoImposto()+"&salarioLiquido="+func1.calculoSalarioLiquido());//.forward(request, response);
         }
     }
 

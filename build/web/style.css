@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+            body,
+            input,
+            button {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            
+            #containerInputs {
+                display: flex;
+                flex-direction: column;
+                align-itens: center;
+                align-content: center;
+                width: 40%;
+                margin-left: 25%;
+            }
+            
+            #containerInputs input[type=number] {
+                margin-top:10px;
+                border:1px solid #ddd;
+                border-radius:4px;
+                height:48px;
+                padding:0 10px;
+                font-size:16px;
+                opacity: 0.6;
+            }
+            
+            #containerInputs select {
+                margin-top:10px;
+                border:1px solid #ddd;
+                border-radius:4px;
+                height:48px;
+                padding:0 10px;
+                font-size:16px;
+                opacity: 0.6;
+            }
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--primary-c: #2196F3;
+	--secondary-c: #B2D7F5;
+	
+	--white: #FDFBFB;
+	
+	--text: #082943;	
+	--bg: var(--primary-c);
+}
+
+
+/* Basic Config
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+    ul {
+	list-style-type: none;
+	padding-left: 50px;
+	margin: 0;
+}
+
+    li {
+	display: block;
+	position: relative;
+	padding: 20px 0px;
+    }
+
+    h2 {
+	margin: 10px 0;
+	font-weight: 900;
+    }
+
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .card {
+	display: flex;
+	flex-direction: column;	
+	background: var(--white);
+	width: 300px;
+	padding: 20px 25px;
+	border-radius: 20px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+    }
+
+
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        input[type=radio] {
+                position: absolute;
+                visibility: hidden;
+        }
+
+        label { 
+                cursor: pointer; 
+                font-weight: 400;
+        }
+
+        .check {
+                width: 30px; height: 30px;
+                position: absolute;
+                border-radius: 50%;
+                transition: transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        /* Reset */
+        input#operario ~ .check { 
+                transform: translate(-50px, -25px); 
+                background: var(--secondary-c); 
+        }
+        input#gerente ~ .check { 
+                transform: translate(-50px, -83px); 
+                background: var(--primary-c);
+                box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+        }
+
+/* Radio Input #1 */
+input#operario:checked ~ .check { transform: translate(-50px, 33px); }
+
+/* Radio Input #2  */
+input#gerente:checked ~ .check { transform: translate(-50px, -25px); }
+
+
+
+            #containerResult {
+                display: flex;
+                flex-direction: column;
+                align-itens: center;
+                align-content: center;
+                width: 40%;
+                margin-left: 25%;
+            }
+            
+            #containerInputs input {
+                margin-left: 20px;
+            }
+            
+            #containerInputs select {
+                margin-left: 20px;
+            }
+            
+            #containerResult input {
+                margin-left: 20px;
+                margin: 10px;
+                margin-top: 10px;
+                border:1px solid #ddd;
+                border-radius:4px;
+                height:48px;
+                padding:0 20px;
+                font-size:16px;
+                opacity: 0.6;
+            }
+            
+            #btnContainer {
+                display: flex;
+                flex-direction: row;
+                align-itens: center;
+                align-content: center;
+                width: 40%;
+                margin-left: 45%;
+                margin-bottom: 20px;
+            }
+            
+            #btnContainer a {
+                text-decoration: none;
+                color: #18B8D0;
+            }
+            
+            #btnContainer button {
+                width: 80px;
+                margin-left: 20px;
+                margin-top:10px;
+                border:0; 
+                border-radius: 4px;
+                height:48px;
+                font-size:16px;
+                cursor:pointer;
+                color: #18B8D0;
+                font-weight: bold;
+            }

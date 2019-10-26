@@ -1,4 +1,4 @@
-package pacotao;
+package pacoteBase;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -28,21 +28,21 @@ public class Funcionario {
             this.turnoTrabalho = "Noturno";
         }
         
-        if(categoriaFuncionario.equals("Operário")){
+        if(categoriaFuncionario.equals("operario")){
             if(this.turnoTrabalho.equals("Matutino") || this.turnoTrabalho.equals("Vespertino")){
-                this.acrescimoBeneficio = 0.05F;
+                this.acrescimoBeneficio = 0.005F;
             }
             else if (this.turnoTrabalho.equals("Noturno") )
             {
-                this.acrescimoBeneficio = 0.07F;
+                this.acrescimoBeneficio = 0.007F;
             }
-        }else{
+        }else if (categoriaFuncionario.equals("gerente")) {
             if(this.turnoTrabalho.equals("Matutino") || this.turnoTrabalho.equals("Vespertino")){
-                this.acrescimoBeneficio = 0.07F;
+                this.acrescimoBeneficio = 0.007F;
             }
             else if (this.turnoTrabalho.equals("Noturno") )
             {
-                this.acrescimoBeneficio = 0.1F;
+                this.acrescimoBeneficio = 0.01F;
             }
         }
         
@@ -97,7 +97,7 @@ public class Funcionario {
         
         if(salarioBruto < 1499.16){
             aliquota = 0;
-        }else if(salarioBruto < 2246.77){
+        }else if(salarioBruto < 2246.76){
             aliquota = 0.075F;
             parcelaDedutivel = 112.43F;
         }else if(salarioBruto < 2995.71){

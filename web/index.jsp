@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 07/10/2019, 19:56:05
-    Author     : 2746071
+    Document   : redirect
+    Created on : 07/10/2019
+    Author     : 2653350, Luís Gustavo Borges de Lima
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Redirect to page</title>
     </head>
     <body>
-        <h1>Hello World!</h1
+        <h2>Redirecionando para aplicação...</h2>
         <%
-    String redirectURL = "newjsp.jsp";
-    response.sendRedirect(redirectURL);
-%>
+            String redirectURL = "pageFirst.jsp";
+            response.sendRedirect(redirectURL);
+        %>
     </body>
 </html>
